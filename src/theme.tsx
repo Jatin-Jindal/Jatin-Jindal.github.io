@@ -15,8 +15,8 @@ const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         fontFamily: "body",
-        color: mode("gray.800", "whiteAlpha.900")(props),
-        bg: mode("white", "#090E16")(props),
+        color: mode("whiteAlpha.900", "whiteAlpha.900")(props),
+        bg: mode("#090E16", "#090E16")(props),
         lineHeight: "base",
       },
     }),
@@ -24,15 +24,15 @@ const theme = extendTheme({
   semanticTokens: {
     colors: {
       text: {
-        default: "#16161D",
+        default: "#ade3b8",
         _dark: "#ade3b8",
       },
       heroGradientStart: {
-        default: "#7928CA",
+        default: "#e3a7f9",
         _dark: "#e3a7f9",
       },
       heroGradientEnd: {
-        default: "#FF0080",
+        default: "#fbec8f",
         _dark: "#fbec8f",
       },
     },
