@@ -1,8 +1,8 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Heading } from "@chakra-ui/react";
 import React from "react";
 
 interface ExperienceProps {
-  image: 
+  image?: string;
 }
 
 export const Experience: React.FC<ExperienceProps> = ({}) => {
@@ -13,7 +13,7 @@ export const Experience: React.FC<ExperienceProps> = ({}) => {
       gap={6}
     >
       <GridItem colSpan={2} rowSpan={1} bg="tomato">
-          <Heading fontSize="xl">Experience</Heading>
+        <Heading fontSize="xl">Experience</Heading>
       </GridItem>
     </Grid>
   );
