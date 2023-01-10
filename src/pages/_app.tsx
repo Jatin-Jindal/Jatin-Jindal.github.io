@@ -13,11 +13,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     toggleColorMode();
   }
   return (
-    <DarkMode>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <DarkMode>
         <Component {...pageProps} />
-      </ChakraProvider>
-    </DarkMode>
+      </DarkMode>
+    </ChakraProvider>
   );
 }
 
