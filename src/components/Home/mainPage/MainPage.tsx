@@ -14,11 +14,13 @@ import InfoCard from "./InfoCard";
 import { FaWhatsapp } from "react-icons/fa";
 import { DownloadIcon } from "@chakra-ui/icons";
 
-interface MainPageProps {}
+interface MainPageProps {
+  id?: string;
+}
 
-export const MainPage: React.FC<MainPageProps> = ({}) => {
+export const MainPage: React.FC<MainPageProps> = ({ id }) => {
   return (
-    <Flex mx="7vw" mt="7vh" mb="14vh">
+    <Flex mx="7vw" mt="7vh" mb="14vh" id={id || "mainPage"}>
       <Box my="auto">
         <InfoCard />
       </Box>

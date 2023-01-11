@@ -17,6 +17,11 @@ export const Home: React.FC<HomeProps> = ({}) => {
         backgroundColor="#7B4AE233"
       />
       <Experience />
+      <Divider
+        borderColor="#7B4AE233"
+        color="#7B4AE233"
+        backgroundColor="#7B4AE233"
+      />
     </>
   );
 };

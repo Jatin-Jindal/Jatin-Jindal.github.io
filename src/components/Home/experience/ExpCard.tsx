@@ -1,14 +1,4 @@
-import {
-  Card,
-  CardHeader,
-  Heading,
-  CardBody,
-  CardFooter,
-  Button,
-  Text,
-  Stack,
-  Center,
-} from "@chakra-ui/react";
+import { Card, Heading, CardBody, Text, Stack, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
