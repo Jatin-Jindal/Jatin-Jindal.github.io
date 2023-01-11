@@ -57,15 +57,15 @@ export const InfoCard: React.FC<InfoCardProps> = ({}) => {
             Jindal
           </Heading>
           <Text fontSize="lg" color="gray.500">
-            FS Dev | Linux Enthusiast
+            Fullstack developer · Linux Enthusiast
           </Text>
         </Stack>
       </CardBody>
-      <CardFooter>
+      <CardFooter mt="1em">
         <Wrap spacing="1em">
           {Object.entries(socials).map(([key, { as, link }]) => (
-            <WrapItem>
-              <Link href={link} key={key}>
+            <WrapItem key={key}>
+              <Link href={link}>
                 <Icon as={as} aria-label={key} boxSize="7" color="#FFFFFF80" />
               </Link>
             </WrapItem>
