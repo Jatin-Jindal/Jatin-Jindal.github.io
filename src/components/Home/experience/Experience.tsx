@@ -1,23 +1,19 @@
 import {
-  AspectRatio,
-  Box,
   Center,
   Flex,
   Grid,
   GridItem,
-  Heading,
   Spacer,
-  Text,
   useMediaQuery,
-  VStack,
   Wrap,
 } from "@chakra-ui/react";
 import React from "react";
 import ExpCard from "./ExpCard";
-import CodeIcon from "./assets/CodeIcon.svg";
-import DesignIcon from "./assets/DesignIcon.svg";
-import ProjectsIcon from "./assets/ProjectsIcon.svg";
 import ExpCardSub from "./ExpCardSub";
+
+import CodeIcon from "public/CodeIcon.svg";
+import DesignIcon from "public/DesignIcon.svg";
+import ProjectsIcon from "public/ProjectsIcon.svg";
 
 interface ExperienceProps {
   id?: string;

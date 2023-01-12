@@ -1,8 +1,9 @@
-import { Center, Flex, Spacer, Wrap } from "@chakra-ui/react";
-import profilePic from "../../assets/ProfilePic.png";
+import { Center, Flex, Spacer } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
 import AboutCard from "./AboutCard";
+
+import profilePic from "public/ProfilePic.png";
 
 interface AboutProps {}
 

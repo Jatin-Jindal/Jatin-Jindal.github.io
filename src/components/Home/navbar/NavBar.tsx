@@ -1,7 +1,7 @@
 import { Flex, Spacer, Box, Button, ButtonGroup, Link } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import logo from "./../../../assets/Logo.svg";
+import logo from "public/Logo.svg";
 
 const buttons = {
   Home: "#",

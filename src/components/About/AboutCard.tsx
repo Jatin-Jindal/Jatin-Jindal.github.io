@@ -10,8 +10,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import EmojiProvider from "../EmojiProvider";
-import ghostmangy from "../../assets/ghostmangy.png";
 import Image from "next/image";
+
+import ghostmangy from "public/ghostmangy.png";
 
 interface AboutCardProps {}
 

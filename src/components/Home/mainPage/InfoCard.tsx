@@ -11,7 +11,6 @@ import {
   WrapItem,
   Box,
   Flex,
-  Image,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from "react";
