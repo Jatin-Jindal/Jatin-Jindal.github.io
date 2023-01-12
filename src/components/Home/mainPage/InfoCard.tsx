@@ -10,9 +10,12 @@ import {
   Wrap,
   WrapItem,
   Box,
+  Flex,
+  Image,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from "react";
+import EmojiProvider from "../../EmojiProvider";
 
 const socials = {
   Linkedin: {
@@ -31,16 +34,19 @@ export const InfoCard: React.FC<InfoCardProps> = ({}) => {
   return (
     <Card variant="unstyled" maxW="sm">
       <CardBody>
-        <Box bgColor="#7B4AE21A" p="1em" borderRadius="1em">
-          <Heading
-            size="md"
-            color="#7B4AE2"
-            fontFamily={`"Raleway", sans-serif`}
-            fontWeight="700"
-          >
-            👋 Hello there!
-          </Heading>
-        </Box>
+        <Flex>
+          <Box bgColor="#7B4AE21A" p="1em" borderRadius="1em">
+            <Heading
+              size="md"
+              color="#7B4AE2"
+              fontFamily={`"Raleway", sans-serif`}
+              fontWeight="700"
+            >
+              <EmojiProvider emoji="👋" alt="Hello" />
+              Hello there!
+            </Heading>
+          </Box>
+        </Flex>
         <Stack mt="6" spacing="3">
           <Heading
             fontFamily={`"Raleway", sans-serif`}
