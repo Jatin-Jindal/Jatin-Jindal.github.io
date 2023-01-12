@@ -5,6 +5,7 @@ import {
   Link,
   Spacer,
   Text,
+  Tooltip,
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -39,9 +40,21 @@ export const MainPage: React.FC<MainPageProps> = ({ id }) => {
         fontWeight="600"
         color="#7B4AE280"
       >
-        <Link href="https://chakra-ui.com" isExternal>
-          Download CV <DownloadIcon mx="2px" />
-        </Link>
+        <Tooltip
+          hasArrow
+          label="Coming soon!"
+          aria-label="Download Resume"
+          bg="#101928"
+          color="teal.300"
+          fontFamily={`"Raleway", sans-serif`}
+          fontWeight="800"
+          letterSpacing={"wide"}
+          borderRadius={"md"}
+        >
+          <Link href="#">
+            Download CV <DownloadIcon mx="2px" />
+          </Link>
+        </Tooltip>
         <Button
           leftIcon={<FaWhatsapp />}
           color="#7B4AE280"

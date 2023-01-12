@@ -77,6 +77,7 @@ export const skills: React.FC<skillsProps> = ({}) => {
           fontFamily={`"Raleway", sans-serif`}
           fontWeight="700"
           size="2xl"
+          textAlign={"center"}
         >
           Technologies and Skills
         </Heading>

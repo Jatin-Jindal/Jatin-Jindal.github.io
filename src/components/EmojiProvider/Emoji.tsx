@@ -15,6 +15,7 @@ const emojis = {
   "🎓": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/graduation-cap_1f393.png",
   "💡": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/light-bulb_1f4a1.png",
   "🚀": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/rocket_1f680.png",
+  "📬": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/open-mailbox-with-raised-flag_1f4ec.png",
 };
 
 export const Emoji: React.FC<EmojiProps> = ({ emoji, alt, maxH, mr, my }) => {
