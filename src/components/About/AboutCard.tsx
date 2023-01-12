@@ -61,6 +61,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
               letterSpacing="wide"
               fontFamily={`"Raleway", sans-serif`}
               noOfLines={3}
+              key={_}
             >
               <EmojiProvider
                 emoji={line.split(":")[0]}

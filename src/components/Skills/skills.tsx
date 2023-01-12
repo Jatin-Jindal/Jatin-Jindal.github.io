@@ -5,13 +5,13 @@ import {
   Heading,
   Icon,
   Text,
+  Tooltip,
   VStack,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
 import React from "react";
 import {
-  SiBitbucket,
   SiBootstrap,
   SiCss3,
   SiDocker,
@@ -31,32 +31,32 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 import EmojiProvider from "../EmojiProvider";
+import TechStack from "./TechStack";
 
 interface skillsProps {}
 
 export const skills: React.FC<skillsProps> = ({}) => {
-  const dayToDay = [
-    SiReact,
-    SiJavascript,
-    SiTypescript,
-    SiNextdotjs,
-    SiCss3,
-    SiHtml5,
-    SiGithub,
-    SiGit,
-    SiPython,
-  ];
-  const someExp = [
-    SiBitbucket,
-    SiPostgresql,
-    SiMysql,
-    SiVuedotjs,
-    SiNodedotjs,
-    SiDocker,
-    SiTailwindcss,
-    SiBootstrap,
-    SiSass,
-  ];
+  const dayToDay = {
+    React: SiReact,
+    Javascript: SiJavascript,
+    Typescript: SiTypescript,
+    "Next.js": SiNextdotjs,
+    Css: SiCss3,
+    Html5: SiHtml5,
+    Github: SiGithub,
+    Git: SiGit,
+    Python: SiPython,
+  };
+  const someExp = {
+    Postgresql: SiPostgresql,
+    Mysql: SiMysql,
+    "Vue.js": SiVuedotjs,
+    "Node.js": SiNodedotjs,
+    Docker: SiDocker,
+    Tailwind: SiTailwindcss,
+    Bootstrap: SiBootstrap,
+    Sass: SiSass,
+  };
   return (
     <Center id="skills">
       <VStack spacing={5}>
@@ -82,61 +82,14 @@ export const skills: React.FC<skillsProps> = ({}) => {
           Technologies and Skills
         </Heading>
 
-        <Box>
-          <Center>
-            <Text
-              fontSize="2xl"
-              color="gray.500"
-              fontWeight={400}
-              letterSpacing="wide"
-              fontFamily={`"Raleway", sans-serif`}
-              textAlign="center"
-              mt="6vh"
-              mb="3vh"
-            >
-              Technologies I use day to day
-            </Text>
-          </Center>
-          <Wrap spacing={9} align="center" justify="center">
-            {dayToDay.map((icon, index) => (
-              <WrapItem key={`${index}-${icon}`}>
-                <Icon
-                  as={icon}
-                  boxSize={16}
-                  color="#7B4AE280"
-                  borderRadius="md"
-                />
-              </WrapItem>
-            ))}
-          </Wrap>
-        </Box>
-        <Box>
-          <Center>
-            <Text
-              fontSize="2xl"
-              color="gray.500"
-              fontWeight={400}
-              letterSpacing="wide"
-              fontFamily={`"Raleway", sans-serif`}
-              textAlign="center"
-              my="3vh"
-            >
-              Technologies I don't use that often, but am experienced with
-            </Text>
-          </Center>
-          <Wrap spacing={9} align="center" justify="center">
-            {someExp.map((icon, index) => (
-              <WrapItem key={`${index}-${icon}`}>
-                <Icon
-                  as={icon}
-                  boxSize={16}
-                  color="#7B4AE280"
-                  borderRadius="md"
-                />
-              </WrapItem>
-            ))}
-          </Wrap>
-        </Box>
+        <TechStack
+          heading="Technologies I use on a daily basis"
+          techObj={dayToDay}
+        />
+        <TechStack
+          heading="Technologies I don't use that ofter, but am experienced with"
+          techObj={someExp}
+        />
       </VStack>
     </Center>
   );

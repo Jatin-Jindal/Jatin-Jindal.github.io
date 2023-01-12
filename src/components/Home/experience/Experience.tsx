@@ -43,7 +43,7 @@ export const Experience: React.FC<ExperienceProps> = ({ id }) => {
               numYears={7}
               activity="Learning"
               icon={ProjectsIcon}
-              filled={true}
+              filled
             />
           </GridItem>
           <GridItem colSpan={1} rowSpan={1}>
@@ -65,12 +65,7 @@ export const Experience: React.FC<ExperienceProps> = ({ id }) => {
       ) : (
         <Wrap my="6em" align="center" justify="center">
           <ExpCard numYears={5} activity="Programming" icon={CodeIcon} />
-          <ExpCard
-            numYears={7}
-            activity="Learning"
-            icon={ProjectsIcon}
-            filled={true}
-          />
+          <ExpCard numYears={7} activity="Learning" icon={ProjectsIcon} />
           <ExpCard numYears={4} activity="Coding" icon={DesignIcon} />
         </Wrap>
       )}
