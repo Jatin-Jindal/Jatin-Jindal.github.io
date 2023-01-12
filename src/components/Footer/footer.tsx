@@ -41,7 +41,7 @@ export const footer: React.FC<footerProps> = ({}) => {
             fontFamily={`"Raleway", sans-serif`}
             textAlign="right"
           >
-            Copyright © 2021 Jatin Jindal
+            Copyright © 2023 Jatin Jindal
           </Text>
         </Flex>
         <Wrap spacing="1em" align="center" justify="center">

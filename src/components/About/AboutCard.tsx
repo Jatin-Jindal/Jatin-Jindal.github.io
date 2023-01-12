@@ -7,19 +7,20 @@ import {
   Text,
   Box,
   Flex,
-  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import EmojiProvider from "../EmojiProvider";
+import ghostmangy from "../../assets/ghostmangy.png";
+import Image from "next/image";
 
 interface AboutCardProps {}
 
 export const AboutCard: React.FC<AboutCardProps> = ({}) => {
-  const aboutMe = `👋:My name is Jatin Jindal, most of my friends prefer calling me Jindal though, online, I go by ghostmander.
-👨‍💻:I’ve been developing with programming interfaces like Javascript, ReactJS and TypeScript since 2 years 
-🎓:Will graduate from Vellore Institute of Technology, Bhopal (VIT, B) in 2025 with a degree in CSE
-💡:My interests mainly lie in exploring Linux based systems, developing full stacks and experimenting in frontend elements in my free time.
-🚀:Everyday, I’m just trying to be a little better than yesterday if not, then learn as much as possible in my life.`;
+  const aboutMe = `👋:My name is Jatin Jindal, and I prefer to go by Jatin. My pronouns are he/him.
+👨‍💻:I’ve been developing with programming interfaces like Javascript, ReactJS and TypeScript since 4 years.
+🎓:I am currently pursuing my degree in Computer Science and Engineering from Vellore Institute of Technology, Bhopal and set to graduate in 2025.
+💡:My interests lie in exploring Linux-based systems, developing full-stack applications and experimenting with front-end elements in my free time.
+🚀:I am constantly striving to improve and learn more in my field and am excited to bring my skills and passion to a dynamic team.`;
   return (
     <Card variant="unstyled" maxW={{ base: "100%", md: "57%" }}>
       <CardBody>
@@ -36,7 +37,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
             </Heading>
           </Box>
         </Flex>
-        <Stack mt="6" spacing="0">
+        <Flex mt="6" gap={4}>
           <Heading
             fontFamily={`"Raleway", sans-serif`}
             fontWeight="700"
@@ -44,14 +45,37 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
           >
             Jatin Jindal
           </Heading>
-          <Heading
-            fontFamily={`"Raleway", sans-serif`}
-            fontWeight="700"
-            size="2xl"
-          >
-            aka Ghostmander
-          </Heading>
-        </Stack>
+          <Flex>
+            <Flex
+              bgColor="#7B4AE21A"
+              px="6"
+              py="3"
+              borderRadius="1em"
+              align="center"
+            >
+              <Image
+                src={ghostmangy}
+                alt="Ghostmander"
+                style={{
+                  display: "inline",
+                  maxHeight: "1.5rem",
+                  maxWidth: "1.5rem",
+                  marginRight: "0.5rem",
+                  marginTop: "0.01rem",
+                  aspectRatio: "1/1",
+                }}
+              />
+              <Heading
+                size="md"
+                color="#7B4AE2"
+                fontFamily={`"Raleway", sans-serif`}
+                fontWeight="700"
+              >
+                Ghostmander
+              </Heading>
+            </Flex>
+          </Flex>
+        </Flex>
         <Stack mt="6" spacing="6">
           {aboutMe.split("\n").map((line, _) => (
             <Text

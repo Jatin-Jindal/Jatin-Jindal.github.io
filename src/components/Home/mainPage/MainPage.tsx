@@ -6,6 +6,7 @@ import {
   Spacer,
   Text,
   Tooltip,
+  useMediaQuery,
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -20,12 +21,14 @@ interface MainPageProps {
 }
 
 export const MainPage: React.FC<MainPageProps> = ({ id }) => {
+  const [isSmallerThan1118] = useMediaQuery("(max-width: 1118px)");
   return (
     <Flex
       mx="7vw"
       mt="7vh"
       mb="14vh"
       id={id || "mainPage"}
+      flexWrap={isSmallerThan1118 ? "wrap" : "nowrap"}
       flexDirection={{ base: "column", md: "row" }}
     >
       <Box my="auto">
