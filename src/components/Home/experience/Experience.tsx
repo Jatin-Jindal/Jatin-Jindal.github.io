@@ -3,6 +3,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Show,
   Spacer,
   useMediaQuery,
   Wrap,
@@ -20,10 +21,9 @@ interface ExperienceProps {
 }
 
 export const Experience: React.FC<ExperienceProps> = ({ id }) => {
-  const [isLargerThanMD] = useMediaQuery(`(min-width: 52em)`);
   return (
     <Center id={id || "experience"}>
-      {isLargerThanMD ? (
+      <Show above="md">
         <Grid
           mt="6em"
           templateColumns="repeat(3, 1fr)"
@@ -58,13 +58,14 @@ export const Experience: React.FC<ExperienceProps> = ({ id }) => {
             </Flex>
           </GridItem>
         </Grid>
-      ) : (
+      </Show>
+      <Show below="md">
         <Wrap my="6em" align="center" justify="center">
           <ExpCard numYears={5} activity="Programming" icon={CodeIcon} />
           <ExpCard numYears={7} activity="Learning" icon={ProjectsIcon} />
           <ExpCard numYears={4} activity="Coding" icon={DesignIcon} />
         </Wrap>
-      )}
+      </Show>
     </Center>
   );
 };

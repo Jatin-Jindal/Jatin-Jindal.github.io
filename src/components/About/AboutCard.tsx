@@ -7,6 +7,7 @@ import {
   Text,
   Box,
   Flex,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import EmojiProvider from "../EmojiProvider";
@@ -22,6 +23,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
 🎓:I am currently pursuing my degree in Computer Science and Engineering from Vellore Institute of Technology, Bhopal and set to graduate in 2025.
 💡:My interests lie in exploring Linux-based systems, developing full-stack applications and experimenting with front-end elements in my free time.
 🚀:I am constantly striving to improve and learn more in my field and am excited to bring my skills and passion to a dynamic team.`;
+  const [lessThan335px] = useMediaQuery("(max-width: 335px)");
   return (
     <Card variant="unstyled" maxW={{ base: "100%", md: "57%" }}>
       <CardBody>
@@ -38,7 +40,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
             </Heading>
           </Box>
         </Flex>
-        <Flex mt="6" gap={4}>
+        <Flex mt="6" gap={4} flexDir={lessThan335px ? "column-reverse" : "row"}>
           <Heading
             fontFamily={`"Raleway", sans-serif`}
             fontWeight="700"
@@ -85,7 +87,7 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
               fontWeight={400}
               letterSpacing="wide"
               fontFamily={`"Raleway", sans-serif`}
-              noOfLines={3}
+              textAlign="justify"
               key={_}
             >
               <EmojiProvider
