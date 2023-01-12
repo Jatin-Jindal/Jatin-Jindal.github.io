@@ -92,7 +92,8 @@ export const NavBar: React.FC<navbarProps> = ({ id }) => {
                 <MenuItem
                   key={key}
                   onClick={() => {
-                    window.location.href = value;
+                    // @ts-ignore
+                    window.location = value;
                   }}
                   bg="#0f1120"
                   _hover={{ bg: "#00000080" }}
