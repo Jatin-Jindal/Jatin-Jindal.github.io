@@ -6,10 +6,10 @@ import logo from "./../../../assets/Logo.svg";
 const buttons = {
   Home: "#",
   "About me": "#about",
-  Portfolio: "#portfolio",
+  // Portfolio: "#portfolio",
   Skills: "#skills",
-  Career: "#career",
-  Recommendations: "#recommendations",
+  // Career: "#career",
+  // Recommendations: "#recommendations",
   Contact: "#contact",
 };
 
@@ -35,7 +35,12 @@ export const NavBar: React.FC<navbarProps> = ({ id }) => {
         />
       </Box>
       <Spacer />
-      <ButtonGroup spacing="0" p="4" variant="ghost">
+      <ButtonGroup
+        spacing="0"
+        p="4"
+        variant="ghost"
+        display={{ base: "none", md: "block" }}
+      >
         {Object.entries(buttons).map(([key, value]) => (
           <Link href={value} key={key}>
             <Button

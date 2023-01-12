@@ -20,7 +20,13 @@ interface MainPageProps {
 
 export const MainPage: React.FC<MainPageProps> = ({ id }) => {
   return (
-    <Flex mx="7vw" mt="7vh" mb="14vh" id={id || "mainPage"}>
+    <Flex
+      mx="7vw"
+      mt="7vh"
+      mb="14vh"
+      id={id || "mainPage"}
+      flexDirection={{ base: "column", md: "row" }}
+    >
       <Box my="auto">
         <InfoCard />
       </Box>

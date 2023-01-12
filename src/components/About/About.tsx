@@ -9,7 +9,7 @@ interface AboutProps {}
 export const About: React.FC<AboutProps> = ({}) => {
   return (
     <Flex id="about" flexDir={{ base: "column", md: "row" }} my="14vh" mx="7vw">
-      <Center minW={"5em"}>
+      <Center minW={"5em"} mb={{ base: 12, md: 0 }}>
         <Image src={profilePic} alt="About" />
       </Center>
       <Spacer />
