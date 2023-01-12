@@ -17,6 +17,9 @@ const breakpoints = {
 const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
+      html: {
+        scrollBehavior: "smooth",
+      },
       body: {
         fontFamily: "body",
         color: mode("whiteAlpha.900", "whiteAlpha.900")(props),
