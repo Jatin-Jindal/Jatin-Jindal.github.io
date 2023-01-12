@@ -87,7 +87,7 @@ export const skills: React.FC<skillsProps> = ({}) => {
           techObj={dayToDay}
         />
         <TechStack
-          heading="Technologies I don't use that ofter, but am experienced with"
+          heading="Technologies I don't use that often, but am experienced with"
           techObj={someExp}
         />
       </VStack>
