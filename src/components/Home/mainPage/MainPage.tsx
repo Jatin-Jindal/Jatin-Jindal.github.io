@@ -35,7 +35,7 @@ export const MainPage: React.FC<MainPageProps> = ({ id }) => {
         <InfoCard />
       </Box>
       <Spacer />
-      <Image src={avatar} alt="avatar" />
+      <Image src={avatar} alt="avatar" loading="eager" />
       <Spacer />
       <VStack
         my="auto"
