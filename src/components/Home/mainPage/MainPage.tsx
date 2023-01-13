@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import avatar from "public/avatar.png";
+import avatar from "public/avatar.svg";
 import React from "react";
 import InfoCard from "./InfoCard";
 import { FaWhatsapp } from "react-icons/fa";
