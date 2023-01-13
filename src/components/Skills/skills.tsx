@@ -1,15 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  Icon,
-  Text,
-  Tooltip,
-  VStack,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, VStack } from "@chakra-ui/react";
 import React from "react";
 import {
   SiBootstrap,

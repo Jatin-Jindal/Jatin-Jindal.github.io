@@ -8,7 +8,7 @@ interface EmojiProps {
   mr?: number;
   my?: number;
 }
-const emojis = {
+const emojis: { [key: string]: string } = {
   "🧐": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/face-with-monocle_1f9d0.png",
   "👋": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/waving-hand_1f44b.png",
   "👨‍💻": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/285/technologist_1f9d1-200d-1f4bb.png",

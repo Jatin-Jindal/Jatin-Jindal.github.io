@@ -52,6 +52,7 @@ const theme = extendTheme({
   },
   fonts,
   breakpoints,
+  config,
 });
 
 export default theme;

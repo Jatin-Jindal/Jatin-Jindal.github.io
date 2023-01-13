@@ -16,13 +16,7 @@ import {
 import Image from "next/image";
 import React from "react";
 import logo from "public/Logo.svg";
-import {
-  HamburgerIcon,
-  AddIcon,
-  ExternalLinkIcon,
-  RepeatIcon,
-  EditIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const buttons = {
   Home: "#",
