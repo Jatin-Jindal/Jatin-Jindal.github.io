@@ -1,4 +1,5 @@
 import { ChakraProvider, DarkMode, useColorMode } from "@chakra-ui/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import theme from "../theme";
 import { AppProps } from "next/app";
@@ -31,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ChakraProvider theme={theme}>
         <DarkMode>
           <Component {...pageProps} />
+          <Analytics />
         </DarkMode>
       </ChakraProvider>
     </>
