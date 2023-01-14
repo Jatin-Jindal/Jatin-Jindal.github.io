@@ -52,6 +52,7 @@ export const contact: React.FC<contactProps> = ({}) => {
           justify="center"
           align="center"
           gap={"10vw"}
+          pt={{ base: 10, md: 20 }}
         >
           <Button
             leftIcon={<FaWhatsapp />}
@@ -129,67 +130,6 @@ export const contact: React.FC<contactProps> = ({}) => {
               />
             </Tooltip>
           </ButtonGroup>
-          {/* <VStack mt={{ base: 8, md: 0 }}>
-            <Icon as={FiSend} w={10} h={10} color="#7B4AE280" />
-
-            <Text
-              fontSize="2xl"
-              fontWeight={400}
-              letterSpacing="wide"
-              fontFamily={`"Raleway", sans-serif`}
-              textAlign="center"
-              color="#7B4AE2"
-              mt="6vh"
-              mb="3vh"
-            >
-              E-mail:
-            </Text>
-            <Flex
-              flexDirection={{ base: "column", md: "row" }}
-              align="center"
-              gap={2}
-            >
-              <Text
-                fontSize="2xl"
-                color="gray.500"
-                fontWeight={400}
-                letterSpacing="wide"
-                fontFamily={`"Raleway", sans-serif`}
-                textAlign="center"
-              >
-                jatinjindal.2003@gmail.com
-              </Text>
-              <Tooltip
-                closeDelay={1000}
-                label={copyToolTip}
-                aria-label="Copy"
-                hasArrow
-                bg={copyToolTipBg}
-                color={copyToolTipColor}
-                fontFamily={`"Raleway", sans-serif`}
-                fontWeight="800"
-                letterSpacing={"wide"}
-                borderRadius={"md"}
-              >
-                <CopyIcon
-                  color="#7B4AE280"
-                  boxSize={"2em"}
-                  onClick={() => {
-                    setCopyToolTip("Copied!");
-                    setCopyToolTipColor("green.400");
-                    setCopyToolTipBg("black");
-                    navigator.clipboard.writeText(`jatinjindal.2003@gmail.com`);
-                    setTimeout(() => {
-                      setCopyToolTipBg("#101928");
-                      setCopyToolTipColor("teal.300");
-                      setCopyToolTip("Copy to Clipboard");
-                    }, 1000);
-                  }}
-                  cursor="pointer"
-                />
-              </Tooltip>
-            </Flex>
-          </VStack>  */}
         </Flex>
         <Flex mt="10vh" justify="center" align="center">
           <Flex
@@ -197,6 +137,7 @@ export const contact: React.FC<contactProps> = ({}) => {
             align="center"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             cursor="pointer"
+            fontSize={"sm"}
           >
             <Text
               color="#7B4AE280"

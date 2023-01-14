@@ -33,7 +33,7 @@ export const footer: React.FC<footerProps> = ({}) => {
           ml={{ base: "0rem", md: "2.5rem", lg: "5rem" }}
         >
           <Text
-            fontSize={{ base: "sm", md: "md", lg: "lg", xl: "xl" }}
+            fontSize={{ base: "sm", md: "md" }}
             color="gray.500"
             fontWeight={400}
             letterSpacing="wide"
@@ -50,8 +50,8 @@ export const footer: React.FC<footerProps> = ({}) => {
                 <Icon
                   as={as}
                   aria-label={key}
-                  boxSize={{ base: 8, md: 10, lg: 14, xl: 16 }}
-                  my={{ base: 2, md: 4, lg: 6, xl: 8 }}
+                  boxSize={{ base: 8, md: 10 }}
+                  my={{ base: 2, md: 4 }}
                   color="#FFFFFF80"
                 />
               </Link>

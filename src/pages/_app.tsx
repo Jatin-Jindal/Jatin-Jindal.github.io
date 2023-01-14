@@ -1,5 +1,6 @@
 import { ChakraProvider, DarkMode, useColorMode } from "@chakra-ui/react";
 import { Analytics } from "@vercel/analytics/react";
+import "./FadeInSection.css";
 
 import theme from "../theme";
 import { AppProps } from "next/app";

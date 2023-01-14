@@ -14,6 +14,7 @@ import ExpCardSub from "./ExpCardSub";
 import CodeIcon from "public/CodeIcon.svg";
 import DesignIcon from "public/DesignIcon.svg";
 import ProjectsIcon from "public/ProjectsIcon.svg";
+import FadeInSection from "../../FadeInSection";
 
 interface ExperienceProps {
   id?: string;
@@ -45,21 +46,31 @@ export const Experience: React.FC<ExperienceProps> = ({ id }) => {
             <ExpCard numYears={4} activity="Coding" icon={DesignIcon} />
           </GridItem>
           <GridItem colSpan={3} rowSpan={1}>
-            <Flex backgroundColor="#7B4AE21A" px={12} py={8} borderRadius="3xl">
-              <ExpCardSub subheading="Developing" heading="Full-Stack" />
-              <Spacer />
-              <ExpCardSub
-                subheading="Dozens of projects &"
-                heading="Experience"
-              />
-              <Spacer />
-              <ExpCardSub subheading="Freelancing and" heading="outsourcing" />
-            </Flex>
+            <FadeInSection>
+              <Flex
+                backgroundColor="#7B4AE21A"
+                px={12}
+                py={8}
+                borderRadius="3xl"
+              >
+                <ExpCardSub subheading="Developing" heading="Full-Stack" />
+                <Spacer />
+                <ExpCardSub
+                  subheading="Dozens of projects &"
+                  heading="Experience"
+                />
+                <Spacer />
+                <ExpCardSub
+                  subheading="Freelancing and"
+                  heading="outsourcing"
+                />
+              </Flex>
+            </FadeInSection>
           </GridItem>
         </Grid>
       </Show>
       <Show below="md">
-        <Wrap my="6em" align="center" justify="center">
+        <Wrap my="6em" align="center" justify="center" direction={"column"}>
           <ExpCard numYears={5} activity="Programming" icon={CodeIcon} />
           <ExpCard numYears={7} activity="Learning" icon={ProjectsIcon} />
           <ExpCard numYears={4} activity="Coding" icon={DesignIcon} />

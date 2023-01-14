@@ -20,6 +20,7 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 import EmojiProvider from "../EmojiProvider";
+import FadeInSection from "../FadeInSection";
 import TechStack from "./TechStack";
 
 interface skillsProps {}
@@ -70,15 +71,18 @@ export const skills: React.FC<skillsProps> = ({}) => {
         >
           Technologies and Skills
         </Heading>
-
-        <TechStack
-          heading="Technologies I use on a daily basis"
-          techObj={dayToDay}
-        />
-        <TechStack
-          heading="Technologies I don't use that often, but am experienced with"
-          techObj={someExp}
-        />
+        <FadeInSection>
+          <TechStack
+            heading="Technologies I use on a daily basis"
+            techObj={dayToDay}
+          />
+        </FadeInSection>
+        <FadeInSection>
+          <TechStack
+            heading="Technologies I don't use that often, but am experienced with"
+            techObj={someExp}
+          />
+        </FadeInSection>
       </VStack>
     </Center>
   );

@@ -14,6 +14,7 @@ import EmojiProvider from "../EmojiProvider";
 import Image from "next/image";
 
 import ghostmangy from "public/ghostmangy.png";
+import FadeInSection from "../FadeInSection";
 
 interface AboutCardProps {}
 
@@ -81,22 +82,24 @@ export const AboutCard: React.FC<AboutCardProps> = ({}) => {
         </Flex>
         <Stack mt="6" spacing="6">
           {aboutMe.split("\n").map((line, _) => (
-            <Text
-              fontSize="lg"
-              color="gray.500"
-              fontWeight={400}
-              letterSpacing="wide"
-              fontFamily={`"Raleway", sans-serif`}
-              textAlign="justify"
-              key={_}
-            >
-              <EmojiProvider
-                emoji={line.split(":")[0]}
-                alt={line.split(":")[0]}
-                maxH={5}
-              />
-              {line.split(":")[1]}
-            </Text>
+            <FadeInSection key={_}>
+              <Text
+                fontSize="lg"
+                color="gray.500"
+                fontWeight={400}
+                letterSpacing="wide"
+                fontFamily={`"Raleway", sans-serif`}
+                textAlign="justify"
+                key={_}
+              >
+                <EmojiProvider
+                  emoji={line.split(":")[0]}
+                  alt={line.split(":")[0]}
+                  maxH={5}
+                />
+                {line.split(":")[1]}
+              </Text>
+            </FadeInSection>
           ))}
         </Stack>
       </CardBody>
